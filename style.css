@@ -14,18 +14,24 @@
     box-sizing: border-box;
 }
 body {
-    height: 175vh;
+    height: 170vh;
     width: 100%;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    padding-top: 100px;
+    align-items: center;
 }
 header {
     background-image: linear-gradient(to right, #ff0000, #000000);
     height: 100px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 h1 {
     position: relative;
@@ -40,6 +46,8 @@ h2 {
     font-size: 40px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 10px 0;
 }
 p {
     position: relative;
@@ -47,18 +55,19 @@ p {
     font-size: 22px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(0, 0, 0);
+    text-align: center;
+    margin: 10px 0;
 }
 .button {
     margin: 5px;
     position: relative;
     top: 25px;
-    font-size: 15px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(255, 255, 255);
+    font-size: 13px;
+    padding: 10px 12px;
+    text-align: center;
     background-color: #ff0000;
+    color: rgb(255, 255, 255);
     border-radius: 4px;
-    padding: 15px 15px;
-    text-decoration: none;
     border: 1px solid rgb(112, 49, 49);
     cursor: pointer;
 }
@@ -68,12 +77,16 @@ p {
 .container {
     text-align: center;
 }
-.container1 {
+.container1, .container2 {
     position: relative;
-    top: 10px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 100%;
+    height: 180vh;
     flex: 3;
+    background-color: blanchedalmond;
 }
 .container1 iframe,
 .container2 iframe {
@@ -83,15 +96,27 @@ p {
     transform: translate(-50%, -50%);
     width: 90%;
     height: 90%;
-    max-width: 600px;
-    max-height: 600px;
+    max-width: 500px;
+    max-height: 500px;
 }
-.container2 {
-    top: 10px;
-    position: relative;
+iframe {
+    margin-top: 30px;
     width: 100%;
-    height: 100%;
-    flex: 3;
+    height: 400px;
+    max-width: 800px;
+    border: none;
+    display: none;
+    position: relative;
+    z-index: 1;
+}
+#frame1 {
+    height: 400px;
+    width: 800px;
+    max-width: 800px;
+}
+#frame2 {
+    height: 400px;
+    width: 800px;
 }
 @media (max-width: 1200px) {
     h1 {
@@ -114,6 +139,17 @@ p {
     }
     footer {
         height: 50px;
+    }
+    iframe {
+        width: 90%;
+        height: 350px;
+    }
+    #frame2 {
+        height: 450px;
+    }
+    .button {
+        font-size: 12px;
+        padding: 8px 10px;
     }
 }
 @media (max-width: 768px) {
@@ -141,6 +177,17 @@ p {
     .footertext {
         font-size: 9px;
     }
+    iframe {
+        width: 95%;
+        height: 300px;
+    }
+    #frame2 {
+        height: 400px;
+    }
+    .button {
+        font-size: 11px;
+        padding: 6px 8px;
+    }
 }
 @media (max-width: 480px) {
     h1 {
@@ -166,6 +213,17 @@ p {
     }
     .footertext {
         font-size: 10px;
+    }
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+    #frame2 {
+        height: 350px;
+    }
+    .button {
+        font-size: 10px;
+        padding: 5px 7px;
     }
 }
 @media (max-width: 360px) {
@@ -193,6 +251,17 @@ p {
     .footertext {
         font-size: 10px;
     }
+    iframe {
+        width: 100%;
+        height: 200px;
+    }
+    #frame2 {
+        height: 300px;
+    }
+    .button {
+        font-size: 11px;
+        padding: 6px 8px;
+    }
 }
 @media (max-width: 280px) {
     h1 {
@@ -218,6 +287,13 @@ p {
     }
     .footertext {
         font-size: 2px;
+    }
+    iframe {
+        width: 100%;
+        height: 250px;
+    }
+    #frame2 {
+        height: 250px;
     }
 }
 @media (max-width: 144px) {
@@ -246,19 +322,22 @@ p {
     }
 }
 footer {
-    position:sticky;
     background-image: linear-gradient(to right, #ff0000, #000000);
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    height: 100px; 
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
 }
 .footertext {
-    top: 0; 
-    font-size: 13px; 
+    top: 0;
+    font-size: 13px;
     text-align: center;
     color: white;
-    font-family: "Formula1 Display Wide";
+    font-weight: bold;
 }
