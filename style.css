@@ -1,6 +1,5 @@
 @import url(https://db.onlinewebfonts.com/c/4944f4308352f169f622b1f098fa2203?family=Formula1+Display+Wide);
-@font-face 
-{
+@font-face {
     font-family: "Formula1 Display Wide";
     src: url("https://db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.eot");
     src: url("https://db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.eot?#iefix")format("embedded-opentype"),
@@ -9,57 +8,66 @@
     url("https://db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.ttf")format("truetype"),
     url("https://db.onlinewebfonts.com/t/4944f4308352f169f622b1f098fa2203.svg#Formula1 Display Wide")format("svg");
 }
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body
-{
-    height: 100vh;
+body {
+    height: 185vh;
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
-header
-{
+header {
     background-image: linear-gradient(to right, #ff0000, #000000);
-    height: 14vh;
+    height: 100px;
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-h1
-{
+h1 {
     position: relative;
     top: 20px;
     font-size: 30px;
     font-family: "Formula1 Display Wide";
     color: rgb(255, 255, 255);
 }
-h2
-{
+h2 {
     position: relative;
     top: 20px;
-    font-size: 30px;
+    font-size: 40px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(0, 0, 0);
 }
-p
-{
+p {
     position: relative;
     top: 20px;
     font-size: 22px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(0, 0, 0);
 }
-.container
-{
+.button {
+    margin: 5px;
+    position: relative;
+    top: 25px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: #ff0000;
+    border-radius: 4px;
+    padding: 15px 15px;
+    text-decoration: none;
+    border: 1px solid rgb(112, 49, 49);
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #cc0000;
+}
+.container {
     text-align: center;
 }
-.container1 
-{
+.container1 {
     position: relative;
     width: 100%;
     height: 100%;
@@ -67,13 +75,26 @@ p
 }
 .container1 iframe {
     position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translateY(-48%) translateX(-50%);
+    width: 80%;
+    height: 80%;
+}
+.container2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex: 3;
+}
+.container2 iframe {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     width: 80%;
     height: 80%;
 }
-
 @media (max-width: 1200px) {
     h1 {
         font-size: 25px;
@@ -84,19 +105,27 @@ p
     p {
         font-size: 20px;
     }
+    header {
+        height: 90px;
+    }
     .container1 iframe {
         width: 85%;
         height: 85%;
     }
+    .container2 iframe {
+        width: 85%;
+        height: 85%;
+    }
+    footer {
+        height: 50px;
+    }
 }
-
 @media (max-width: 768px) {
     h1 {
         font-size: 20px;
     }
-    header
-    {
-        height: 14vh;
+    header {
+        height: 80px;
     }
     h2 {
         font-size: 25px;
@@ -108,21 +137,23 @@ p
         width: 80%;
         height: 80%;
     }
+    .container2 iframe {
+        width: 80%;
+        height: 80%;
+    }
     footer {
-        height: 7vh; /* Adjusted size for smaller screens */
+        height: 30px;
     }
     .footertext {
-        font-size: 10px; /* Adjusted font size for smaller screens */
+        font-size: 9px;
     }
 }
-
 @media (max-width: 480px) {
     h1 {
         font-size: 17px;
     }
-    header
-    {
-        height: 13vh;
+    header {
+        height: 70px;
     }
     h2 {
         font-size: 20px;
@@ -134,20 +165,23 @@ p
         width: 75%;
         height: 75%;
     }
+    .container2 iframe {
+        width: 75%;
+        height: 75%;
+    }
     footer {
-        height: 6vh; /* Adjusted size for extra small screens */
+        height: 35px;
     }
     .footertext {
-        font-size: 10px; /* Adjusted font size for extra small screens */
+        font-size: 10px;
     }
 }
 @media (max-width: 360px) {
     h1 {
         font-size: 15px;
     }
-    header
-    {
-        height: 12vh;
+    header {
+        height: 60px;
     }
     h2 {
         font-size: 20px;
@@ -159,27 +193,83 @@ p
         width: 75%;
         height: 75%;
     }
+    .container2 iframe {
+        width: 70%;
+        height: 70%;
+    }
     footer {
-        height: 6vh; /* Adjusted size for very small screens */
+        height: 30px;
     }
     .footertext {
-        font-size: 10px; /* Adjusted font size for very small screens */
+        font-size: 10px;
+    }
+}
+@media (max-width: 280px) {
+    h1 {
+        font-size: 13px;
+    }
+    header {
+        height: 70px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .container1 iframe {
+        width: 65%;
+        height: 65%;
+    }
+    .container2 iframe {
+        width: 65%;
+        height: 65%;
+    }
+    footer {
+        height: 20px;
+    }
+    .footertext {
+        font-size: 2px;
+    }
+}
+@media (max-width: 144px) {
+    h1 {
+        font-size: 9px;
+    }
+    header {
+        height: 40px;
+    }
+    h2 {
+        font-size: 15px;
+    }
+    p {
+        font-size: 12px;
+    }
+    .container1 iframe {
+        width: 60%;
+        height: 60%;
+    }
+    .container2 iframe {
+        width: 60%;
+        height: 60%;
+    }
+    footer {
+        height: 25px;
+    }
+    .footertext {
+        font-size: 6px;
     }
 }
 footer {
     background-image: linear-gradient(to right, #ff0000, #000000);
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: relative; 
-    margin-top: auto; 
-    height: 10vh;
+    height: 120px;
 }
-.footertext
-{
-
-    top: 10px;
+.footertext {
+    top: 15px;
     position: relative;
-    font-size: 13px; 
+    font-size: 14px;
     height: 20px;
     text-align: center;
     color: white;

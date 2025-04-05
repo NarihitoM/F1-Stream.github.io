@@ -14,12 +14,21 @@
         <div class="container">
             <h2>Welcome to the Formula 1 Livestream.</h2>
             <p>Note: The livestream will be only available during live.</p>
+            <P style="font-weight: bold;">Select the server to watch.</P>
+            <button id="skysport-btn" class="button skysport-button" data-target="https://helloapps.blog/web-1/?id=f1">Skysport F1 TV</button>
+            <button id="official-btn" class="button official-button" data-target="https://hakunamatata5.org/hakunamatata5.html">Official F1 TV</button>
         </div>
-        <div class="container1">
-            <iframe id="frame1" sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation"  frameborder="0" src="https://helloapps.blog/web-1/?id=f1" allowfullscreen scrolling="no" allowtransparency></iframe>
-          </div>
-          <footer>
-            <div class="footertext">©2025 Formula 1 All rights reserved.</div>
+        <div class="container1" style="display: block;">
+            <iframe id="frame1" sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" 
+                frameborder="0" src="https://helloapps.blog/web-1/?id=f1" allowfullscreen scrolling="no" allowtransparency></iframe>
+        </div>
+        <div class="container2" style="display: none;">
+            <iframe id="frame2" sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" 
+            frameborder="0" src="https://hakunamatata5.org/hakunamatata5.html" allowfullscreen scrolling="no" allowtransparency></iframe>
+        </div>
+        <footer>
+            <div class="footertext">©2025 Formula 1 All rights reserved.<br>Made By Narihito</div>
         </footer>
+        <script src="function.js"></script>
     </body>
 </html>
