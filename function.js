@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function enableIframe(activeIframe, inactiveIframe, target) {
     activeIframe.src = target;
     activeIframe.style.display = "block";
-    activeIframe.style.width = "100%";
+    activeIframe.style.width = "80%";
     activeIframe.style.height = "60%";
     inactiveIframe.src = "about:blank";
     inactiveIframe.style.display = "none";
