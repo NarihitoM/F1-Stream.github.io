@@ -343,7 +343,9 @@ iframe {
         height: 60%;
     }
     #frame2 {
-        height: 65%;
+        height: 25%;
+        max-height: 700px;
+        max-width: 800px;
     }
 }
 
