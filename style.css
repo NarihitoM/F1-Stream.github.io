@@ -337,7 +337,7 @@ iframe {
 }
 @media (orientation: landscape) {
     body {
-        height: 250vh;
+        height: 180vh;
     }
     iframe {
         height: 60%;

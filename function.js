@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 enableIframe(iframe1, iframe2, target, "80%", "35%");
                 iframe1.scrollIntoView({ behavior: "smooth" });
             } else if (button.classList.contains("official-button")) {
-                enableIframe(iframe2, iframe1, target, "90%", "500px"); 
+                enableIframe(iframe2, iframe1, target, "80%", "450px"); 
                 iframe2.scrollIntoView({ behavior: "smooth" });
             }
         });
