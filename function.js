@@ -12,21 +12,29 @@ document.addEventListener("DOMContentLoaded", () => {
         button.addEventListener("click", () => {
             const target = button.getAttribute("data-target");
             if (button.classList.contains("skysport-button")) {
-                enableIframe(iframe1, iframe2, target);
+                enableIframe(iframe1, iframe2, target, "80%", "35%");
                 iframe1.scrollIntoView({ behavior: "smooth" });
             } else if (button.classList.contains("official-button")) {
-                enableIframe(iframe2, iframe1, target);
+                enableIframe(iframe2, iframe1, target, "90%", "55%"); // Square size for iframe2
                 iframe2.scrollIntoView({ behavior: "smooth" });
             }
         });
     });
+
+    window.addEventListener("orientationchange", () => {
+        if (window.orientation === 90 || window.orientation === -90) {
+            document.body.style.height = "180vh"; 
+        } else {
+            document.body.style.height = "180vh"; 
+        }
+    });
 });
 
-function enableIframe(activeIframe, inactiveIframe, target) {
+function enableIframe(activeIframe, inactiveIframe, target, width, height) {
     activeIframe.src = target;
     activeIframe.style.display = "block";
-    activeIframe.style.width = "80%";
-    activeIframe.style.height = "60%";
+    activeIframe.style.width = width;
+    activeIframe.style.height = height;
     inactiveIframe.src = "about:blank";
     inactiveIframe.style.display = "none";
 }

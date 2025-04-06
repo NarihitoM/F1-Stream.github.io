@@ -101,22 +101,25 @@ p {
 }
 iframe {
     margin-top: 30px;
-    width: 100%;
-    height: 400px;
+    width: 80%;
+    height: 85%;
     max-width: 800px;
     border: none;
     display: none;
     position: relative;
     z-index: 1;
 }
-#frame1 {
-    height: 400px;
-    width: 800px;
+#frame1, #frame2 {
+    width: 80%;
+    height: 55%;
     max-width: 800px;
 }
 #frame2 {
-    height: 400px;
-    width: 800px;
+    width: 50%;
+    height: 60%;
+    max-width: 600px;
+    max-height: 700px;
+    border: none;
 }
 @media (max-width: 1200px) {
     h1 {
@@ -142,10 +145,10 @@ iframe {
     }
     iframe {
         width: 90%;
-        height: 350px;
+        height: 40%;
     }
     #frame2 {
-        height: 450px;
+        height: 550px;
     }
     .button {
         font-size: 12px;
@@ -179,10 +182,10 @@ iframe {
     }
     iframe {
         width: 95%;
-        height: 300px;
+        height: 35%;
     }
     #frame2 {
-        height: 400px;
+        height: 500px;
     }
     .button {
         font-size: 11px;
@@ -215,8 +218,8 @@ iframe {
         font-size: 10px;
     }
     iframe {
-        width: 80%;
-        height: 250px;
+        width: 100%;
+        height: 30%;
     }
     #frame2 {
         height: 350px;
@@ -253,7 +256,7 @@ iframe {
     }
     iframe {
         width: 100%;
-        height: 200px;
+        height: 25%;
     }
     #frame2 {
         height: 300px;
@@ -319,6 +322,40 @@ iframe {
     }
     .footertext {
         font-size: 6px;
+    }
+}
+@media (orientation: landscape) and (max-width: 768px) {
+    body {
+        height: 180vh;
+    }
+    iframe {
+        height: 60%;
+    }
+    #frame2 {
+        height: 85%;
+    }
+}
+@media (orientation: landscape) {
+    body {
+        height: 250vh;
+    }
+    iframe {
+        height: 60%;
+    }
+    #frame2 {
+        height: 65%;
+    }
+}
+
+@media (orientation: portrait) {
+    body {
+        height: 170vh;
+    }
+    iframe {
+        height: 85%;
+    }
+    #frame2 {
+        height: 60%;
     }
 }
 footer {
